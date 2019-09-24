@@ -1,0 +1,33 @@
+﻿<Window x:Class="InventarioReactivoDesktop.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InventarioReactivoDesktop"
+        mc:Ignorable="d"
+        Loaded="Window_Loaded"
+        ResizeMode="NoResize"
+        Title="Login" Height="300" Width="400">
+    <StackPanel>
+        <StackPanel Margin="50, 15, 50, 5">
+            <Label FontWeight="Bold"> User </Label>
+            <TextBox Name="tbUsername" 
+                     VerticalContentAlignment="Center"
+                     Height="30" 
+                     KeyDown="HandleEnterPressed"></TextBox>
+        </StackPanel>
+        
+        <StackPanel Margin="50, 0, 50, 5">
+            <Label FontWeight="Bold">Password</Label>
+            <PasswordBox Name="tbPassword" 
+                         VerticalContentAlignment="Center"
+                         Height="30" 
+                         KeyDown="HandleEnterPressed"></PasswordBox>
+        </StackPanel>
+
+        <StackPanel Margin="50, 10">
+            <Button Height="35" 
+                    Click="Button_Click">Login</Button>
+        </StackPanel>
+    </StackPanel>
+</Window>

@@ -1,0 +1,43 @@
+﻿<Window x:Class="InventarioReactivoDesktop.SearchContainerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InventarioReactivoDesktop"
+        mc:Ignorable="d"
+        Loaded="Window_Loaded"
+        ResizeMode="NoResize"
+        Title="Search Container" Height="300" Width="400">
+    <StackPanel>
+        <StackPanel Margin="50, 15, 50, 10">
+            <Label FontWeight="Bold">Container Id</Label>
+
+            <DockPanel>
+                <TextBox Name="tbContainerId" 
+                         Height="25"
+                         Width="200"
+                         HorizontalAlignment="Left" 
+                         VerticalContentAlignment="Center"
+                         KeyDown="TbContainerId_KeyDown"></TextBox>
+
+                <Button Height="25" 
+                        Width="95"
+                        HorizontalAlignment="Right"
+                        Click="HandleClickSearchContainerId">Search</Button>
+            </DockPanel>
+        </StackPanel>
+
+        <StackPanel Margin="50, 5, 50, 10">
+            <Image Height="60"
+                   Width="150"
+                   Name="imgContainer"></Image>
+        </StackPanel>
+
+        <StackPanel Margin="50, 5, 50, 10">
+            <Button Name="btnPrintLabel" 
+                    Visibility="Hidden"
+                    Height="25" 
+                    Click="HandleClickPrintLabel">Print Label</Button>
+        </StackPanel>
+    </StackPanel>
+</Window>
